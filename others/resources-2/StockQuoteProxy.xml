@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="StockQuoteProxy"
+       transports="http https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <endpoint>
+         <address uri="http://localhost:9000/services/SimpleStockQuoteService"/>
+      </endpoint>
+      <outSequence>
+         <surchargeStockQuote xmlns:axis2ns11="http://ws.apache.org/ns/synapse">
+            <defaultPercentage>10.0</defaultPercentage>
+            <surcharges>
+               <surcharge symbol="MSFT">20.0</surcharge>
+               <surcharge symbol="IBM">15.0</surcharge>
+               <surcharge symbol="SUN">25.0</surcharge>
+            </surcharges>
+         </surchargeStockQuote>
+         <send/>
+      </outSequence>
+   </target>
+   <publishWSDL uri="file:samples/service-bus/resources/proxy/sample_proxy_1.wsdl"/>
+</proxy>

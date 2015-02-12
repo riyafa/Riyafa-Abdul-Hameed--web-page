@@ -1,0 +1,150 @@
+{
+   "agent": "ballerinax",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
+   "case": 368,
+   "closedByMe": false,
+   "createStats": true,
+   "createWirelog": false,
+   "description": "Send 1000 compressed messages each of payload size 8192, auto-fragment to 256 octets. Use default permessage-deflate offer.",
+   "droppedByMe": true,
+   "duration": 5910,
+   "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
+   "expected": {},
+   "expectedClose": {
+      "closeCode": [
+         1000
+      ],
+      "closedByMe": true,
+      "requireClean": true
+   },
+   "failedByMe": false,
+   "httpRequest": "GET /runCase?case=368&agent=ballerinax HTTP/1.1\r\nupgrade: websocket\r\nconnection: upgrade\r\nsec-websocket-key: k5ujWq+NgnEVT+axup/FxQ==\r\nhost: localhost:9001\r\nsec-websocket-origin: http://localhost:9001\r\nsec-websocket-version: 13\r\nsec-websocket-extensions: permessage-deflate;client_max_window_bits,permessage-deflate;client_no_context_takeover;client_max_window_bits,permessage-deflate;client_max_window_bits,permessage-deflate;client_no_context_takeover;client_max_window_bits,deflate-frame,x-webkit-deflate-frame\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.0-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 0gUG47fRwO3K34VCvq1StJR/85U=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "id": "12.4.11",
+   "isServer": true,
+   "localCloseCode": 1000,
+   "localCloseReason": null,
+   "received": [],
+   "remoteCloseCode": 1011,
+   "remoteCloseReason": "Encountered an unexpected condition",
+   "reportCompressionRatio": true,
+   "reportTime": true,
+   "result": "Case did not finish within 480 seconds.",
+   "resultClose": "The connection was failed by the wrong endpoint",
+   "rxFrameStats": {
+      "0": 41,
+      "1": 33,
+      "8": 1
+   },
+   "rxOctetStats": {
+      "181": 1,
+      "186": 1,
+      "197": 1,
+      "231": 1,
+      "244": 1,
+      "257": 1,
+      "273": 1,
+      "310": 1,
+      "314": 1,
+      "322": 1,
+      "327": 1,
+      "333": 1,
+      "379": 1,
+      "391": 1,
+      "395": 1,
+      "404": 1,
+      "406": 1,
+      "420": 1,
+      "422": 1,
+      "429": 1,
+      "452": 1,
+      "453": 1,
+      "454": 1,
+      "484": 1,
+      "500": 1,
+      "517": 1,
+      "553": 1,
+      "581": 1,
+      "613": 1,
+      "702": 1,
+      "720": 1,
+      "871": 1,
+      "1055": 1,
+      "2623": 1
+   },
+   "started": "2019-01-08T07:47:22.056Z",
+   "trafficStats": null,
+   "txFrameStats": {
+      "0": 49,
+      "1": 33,
+      "8": 1
+   },
+   "txOctetStats": {
+      "3": 1,
+      "4": 1,
+      "7": 1,
+      "21": 1,
+      "31": 1,
+      "33": 1,
+      "35": 1,
+      "49": 1,
+      "50": 1,
+      "51": 1,
+      "87": 1,
+      "96": 1,
+      "102": 1,
+      "111": 1,
+      "112": 1,
+      "118": 2,
+      "124": 1,
+      "138": 1,
+      "144": 1,
+      "165": 1,
+      "168": 1,
+      "169": 1,
+      "177": 1,
+      "182": 1,
+      "188": 1,
+      "193": 1,
+      "194": 1,
+      "203": 1,
+      "227": 1,
+      "236": 1,
+      "240": 1,
+      "250": 1,
+      "252": 1,
+      "253": 1,
+      "260": 49
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "RO",
+         [
+            517,
+            "474554202f72756e436173653f636173653d333638266167656e743d62616c6c6572696e617820485454502f312e310d0a757067726164653a20776562736f63 ..."
+         ]
+      ],
+      [
+         "TO",
+         [
+            252,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e5465737453756974652f302e382e ..."
+         ],
+         false
+      ],
+      [
+         "WLM",
+         false
+      ],
+      [
+         "TI",
+         480
+      ]
+   ]
+}

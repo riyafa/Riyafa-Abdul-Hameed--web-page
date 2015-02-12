@@ -1,0 +1,18 @@
+ <class name="org.riyafa.SurchargeStockQuoteMediator">
+    <property name="defaultPercentage" value="10"/>
+</class>
+
+-------------------------------------------------------------------------------
+
+<surchargeStockQuote>
+    <defaultPercentage>10</defaultPercentage>
+    <surcharges>
+        <surcharge symbol="IBM">15</surcharge>
+        <surcharge symbol="MSFT">20</surcharge>
+        <surcharge symbol="SUN">25</surcharge>
+    </surcharges>
+</surchargeStockQuote>
+
+------------------------------------------------------------------------------
+
+ant stockquote -Daddurl=http://localhost:8280/services/StockQuoteProxy -Dsymbol=IBM

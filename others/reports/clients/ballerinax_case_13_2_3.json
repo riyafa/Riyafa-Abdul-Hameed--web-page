@@ -1,0 +1,143 @@
+{
+   "agent": "ballerinax",
+   "behavior": "FAILED",
+   "behaviorClose": "OK",
+   "case": 414,
+   "closedByMe": true,
+   "createStats": true,
+   "createWirelog": false,
+   "description": "Send 1000 compressed messages each of payload size 256, auto-fragment to 0 octets. Use permessage-deflate client offers (requestNoContextTakeover, requestMaxWindowBits): [(True, 0)]",
+   "droppedByMe": true,
+   "duration": 120417,
+   "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 120 secs.",
+   "expected": {},
+   "expectedClose": {
+      "closeCode": [
+         1000
+      ],
+      "closedByMe": true,
+      "requireClean": true
+   },
+   "failedByMe": false,
+   "httpRequest": "GET /runCase?case=414&agent=ballerinax HTTP/1.1\r\nupgrade: websocket\r\nconnection: upgrade\r\nsec-websocket-key: AdxEYNcTF/hOKLvqczki8A==\r\nhost: localhost:9001\r\nsec-websocket-origin: http://localhost:9001\r\nsec-websocket-version: 13\r\nsec-websocket-extensions: permessage-deflate;client_max_window_bits,permessage-deflate;client_no_context_takeover;client_max_window_bits,permessage-deflate;client_max_window_bits,permessage-deflate;client_no_context_takeover;client_max_window_bits,deflate-frame,x-webkit-deflate-frame\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.0-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 1w/InRwxhWCqXDu7TH9Izr4WDn0=\r\nSec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover\r\n\r\n",
+   "id": "13.2.3",
+   "isServer": true,
+   "localCloseCode": null,
+   "localCloseReason": null,
+   "received": [],
+   "remoteCloseCode": null,
+   "remoteCloseReason": null,
+   "reportCompressionRatio": true,
+   "reportTime": true,
+   "result": "Case did not finish within 120 seconds.",
+   "resultClose": "Connection was properly closed",
+   "rxFrameStats": {
+      "1": 604,
+      "8": 1
+   },
+   "rxOctetStats": {
+      "6": 1,
+      "130": 11,
+      "131": 5,
+      "134": 16,
+      "135": 18,
+      "136": 21,
+      "137": 52,
+      "138": 55,
+      "139": 71,
+      "140": 69,
+      "141": 45,
+      "142": 59,
+      "143": 44,
+      "144": 40,
+      "145": 38,
+      "146": 17,
+      "147": 9,
+      "148": 4,
+      "149": 5,
+      "150": 3,
+      "151": 3,
+      "152": 2,
+      "153": 3,
+      "154": 2,
+      "156": 2,
+      "157": 3,
+      "158": 1,
+      "160": 2,
+      "161": 2,
+      "162": 2,
+      "517": 1
+   },
+   "started": "2019-01-08T07:48:59.796Z",
+   "trafficStats": null,
+   "txFrameStats": {
+      "1": 604,
+      "8": 1
+   },
+   "txOctetStats": {
+      "2": 1,
+      "13": 29,
+      "14": 39,
+      "15": 21,
+      "16": 88,
+      "17": 62,
+      "18": 65,
+      "19": 77,
+      "20": 39,
+      "21": 43,
+      "22": 42,
+      "23": 29,
+      "24": 21,
+      "25": 15,
+      "26": 12,
+      "27": 7,
+      "28": 1,
+      "29": 3,
+      "30": 1,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "36": 1,
+      "37": 1,
+      "39": 1,
+      "43": 1,
+      "66": 1,
+      "147": 1,
+      "280": 1
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "RO",
+         [
+            517,
+            "474554202f72756e436173653f636173653d343134266167656e743d62616c6c6572696e617820485454502f312e310d0a757067726164653a20776562736f63 ..."
+         ]
+      ],
+      [
+         "TO",
+         [
+            280,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e5465737453756974652f302e382e ..."
+         ],
+         false
+      ],
+      [
+         "WLM",
+         false
+      ],
+      [
+         "TI",
+         120
+      ],
+      [
+         "TIE"
+      ]
+   ]
+}

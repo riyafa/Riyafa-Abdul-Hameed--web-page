@@ -1,0 +1,47 @@
+JMeter		:	http://jmeter.apache.org/download_jmeter.cgi
+ActiveMQ	:	http://activemq.apache.org/
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+ActiveMQ :: All JAR Bundle	(activemq-all-5.14.5.jar)        :	<ACTIVEMQ_HOME>
+JMS 1.1	(geronimo-jms_1.1_spec-1.1.1.jar)                   :	<ACTIVEMQ_HOME>/lib
+Qpid AMQP 1.0 Client	(qpid-amqp-1-0-client-0.32.jar)	       :	https://mvnrepository.com/artifact/org.apache.qpid/qpid-amqp-1-0-client
+Qpid AMQP 1.0 Client JMS	(qpid-amqp-1-0-client-jms-0.32.jar):	https://mvnrepository.com/artifact/org.apache.qpid/qpid-amqp-1-0-client-jms
+Qpid AMQP 1.0 Common	(qpid-amqp-1-0-common-0.32.jar)	       :	https://mvnrepository.com/artifact/org.apache.qpid/qpid-amqp-1-0-common
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# register some connection factories
+# connectionfactory.[jndiname] = [ConnectionURL - amqp://username:password@host:port]
+connectionfactory.QueueConnectionFactory = amqp://admin@localhost:5672
+connectionfactory.TopicConnectionFactory = amqp://admin@localhost:5672
+ 
+# register some queues in JNDI using the form
+# queue.[jndiName] = [physicalName]
+queue.myQueue = myQueue
+ 
+# register some topics in JNDI using the form
+# topic.[jndiName] = [physicalName]
+topic.myTopic = myTopic
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Test Plan -> Add -> Thread (Users) -> Thread Group
+Thread Group (Subscriber) -> Add -> Sampler -> JMS Subscriber
+Thread Group (Subscriber) -> Add -> Listener -> View Results Tree
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Test Plan -> Add -> Thread (Users) -> Thread Group
+Thread Group (Publisher) -> Add -> Sampler -> JMS Subscriber
+Thread Group (Publisher) -> Add -> Listener -> View Results Tree
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Initial Context Factory - org.apache.qpid.amqp_1_0.jms.jndi.PropertiesFileInitialContextFactory
+Provider URL - /home/riyafa/Documents/Workspace/jndi.properties
+Connection Factory - QueueConnectionFactory
+Destination - myQueue
+
+--------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="StockQuoteProxy"
+       transports="http https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <endpoint>
+         <address uri="http://localhost:9000/services/SimpleStockQuoteService"/>
+      </endpoint>
+      <outSequence>
+         <class name="org.riyafa.SurchargeStockQuoteMediator">
+            <property name="defaultPercentage" value="10"/>
+         </class>
+         <send/>
+      </outSequence>
+   </target>
+   <publishWSDL uri="file:samples/service-bus/resources/proxy/sample_proxy_1.wsdl"/>
+</proxy>

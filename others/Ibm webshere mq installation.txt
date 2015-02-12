@@ -1,0 +1,18 @@
+Download: https://www.ibm.com/developerworks/downloads/ws/wmq/
+
+sudo apt install rpm  
+getent passwd
+sudo adduser mqm
+groups mqm
+sudo ./mqlicense.sh -text_only
+sudo ./crtmqpkg suffix
+cd /var/tmp/mq_rpms/suffice/x86_64
+sudo  rpm -ivh --force-debian --ignorearch MQSeries*.rpm
+ 
+xhost +
+sudo su - mqm
+cd /opt/mqm/bin
+./MQExplorer 
+
+
+Reference: https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_9.0.0/com.ibm.mq.ins.doc/q115250_.htm

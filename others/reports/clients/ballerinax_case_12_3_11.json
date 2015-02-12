@@ -1,0 +1,153 @@
+{
+   "agent": "ballerinax",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
+   "case": 350,
+   "closedByMe": false,
+   "createStats": true,
+   "createWirelog": false,
+   "description": "Send 1000 compressed messages each of payload size 8192, auto-fragment to 256 octets. Use default permessage-deflate offer.",
+   "droppedByMe": true,
+   "duration": 8575,
+   "expectation": "Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.",
+   "expected": {},
+   "expectedClose": {
+      "closeCode": [
+         1000
+      ],
+      "closedByMe": true,
+      "requireClean": true
+   },
+   "failedByMe": false,
+   "httpRequest": "GET /runCase?case=350&agent=ballerinax HTTP/1.1\r\nupgrade: websocket\r\nconnection: upgrade\r\nsec-websocket-key: FJWcbzf/HStf3Lr2zrRrtg==\r\nhost: localhost:9001\r\nsec-websocket-origin: http://localhost:9001\r\nsec-websocket-version: 13\r\nsec-websocket-extensions: permessage-deflate;client_max_window_bits,permessage-deflate;client_no_context_takeover;client_max_window_bits,permessage-deflate;client_max_window_bits,permessage-deflate;client_no_context_takeover;client_max_window_bits,deflate-frame,x-webkit-deflate-frame\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: AutobahnTestSuite/0.8.0-0.10.9\r\nX-Powered-By: AutobahnPython/0.10.9\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: rr9HDB8TPdOReTtTo0HhGL8Z7T4=\r\nSec-WebSocket-Extensions: permessage-deflate\r\n\r\n",
+   "id": "12.3.11",
+   "isServer": true,
+   "localCloseCode": 1000,
+   "localCloseReason": null,
+   "received": [],
+   "remoteCloseCode": 1011,
+   "remoteCloseReason": "Encountered an unexpected condition",
+   "reportCompressionRatio": true,
+   "reportTime": true,
+   "result": "Case did not finish within 480 seconds.",
+   "resultClose": "The connection was failed by the wrong endpoint",
+   "rxFrameStats": {
+      "0": 423,
+      "2": 35,
+      "8": 1
+   },
+   "rxOctetStats": {
+      "43": 1,
+      "241": 1,
+      "517": 1,
+      "1299": 1,
+      "1393": 1,
+      "2659": 1,
+      "3056": 1,
+      "3189": 1,
+      "3509": 1,
+      "3529": 1,
+      "3543": 1,
+      "3566": 1,
+      "3571": 1,
+      "3572": 1,
+      "3599": 1,
+      "3624": 1,
+      "3626": 1,
+      "3639": 2,
+      "3647": 1,
+      "3706": 1,
+      "3747": 1,
+      "3771": 2,
+      "3807": 1,
+      "3809": 1,
+      "3816": 1,
+      "3819": 1,
+      "3828": 1,
+      "3839": 1,
+      "3840": 1,
+      "3855": 2,
+      "3861": 1,
+      "3892": 1,
+      "3914": 1,
+      "3923": 1,
+      "3933": 1,
+      "3937": 1,
+      "3986": 1
+   },
+   "started": "2019-01-08T07:46:54.099Z",
+   "trafficStats": null,
+   "txFrameStats": {
+      "0": 435,
+      "2": 36,
+      "8": 1
+   },
+   "txOctetStats": {
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "25": 1,
+      "30": 1,
+      "31": 1,
+      "34": 1,
+      "41": 1,
+      "42": 2,
+      "45": 1,
+      "50": 1,
+      "54": 1,
+      "59": 1,
+      "82": 1,
+      "90": 1,
+      "107": 1,
+      "135": 2,
+      "150": 1,
+      "166": 1,
+      "185": 1,
+      "205": 1,
+      "207": 2,
+      "211": 1,
+      "217": 1,
+      "227": 1,
+      "230": 1,
+      "233": 1,
+      "235": 1,
+      "236": 1,
+      "237": 1,
+      "244": 1,
+      "252": 1,
+      "254": 1,
+      "255": 2,
+      "260": 435
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "RO",
+         [
+            517,
+            "474554202f72756e436173653f636173653d333530266167656e743d62616c6c6572696e617820485454502f312e310d0a757067726164653a20776562736f63 ..."
+         ]
+      ],
+      [
+         "TO",
+         [
+            252,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e5465737453756974652f302e382e ..."
+         ],
+         false
+      ],
+      [
+         "WLM",
+         false
+      ],
+      [
+         "TI",
+         480
+      ]
+   ]
+}

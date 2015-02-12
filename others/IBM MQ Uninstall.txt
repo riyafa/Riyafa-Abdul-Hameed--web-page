@@ -1,0 +1,12 @@
+./dspmq
+./endmqm ESBQManager
+./endmqlsr -m ESBQManager
+rpm -qa | grep MQSeries
+rpm --force-debian -ev MQSeriesRuntime MQSeriesServer MQSeriesSDK
+rpm -qa | grep MQSeries | sudo xargs rpm --force-debian -ev
+sudo rm -r /var/mqm
+sudo rm -r /etc/opt/mqm
+sudo deluser mqm
+
+Reference:
+https://www.ibm.com/support/knowledgecenter/SSFKSJ_8.0.0/com.ibm.mq.ins.doc/q009440_.htm

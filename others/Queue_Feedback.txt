@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="SenderProxy"
+       startOnLoad="true"
+       statistics="disable"
+       trace="disable"
+       transports="http,https">
+   <target>
+      <inSequence>
+         <property action="remove" name="TRANSPORT_HEADERS" scope="axis2"/>
+         <property name="OUT_ONLY" value="true"/>
+         <call>
+            <endpoint>
+               <address uri="jms:/Queue1?transport.jms.ConnectionFactory=myQueueConnectionFactory1"/>
+            </endpoint>
+         </call>
+         <loopback/>
+      </inSequence>
+      <outSequence>
+         <payloadFactory media-type="json">
+            <format>
+         		{
+				    "Response": "Queued",
+				    "responseDescription": "Message is posted to Queue"
+				}
+         	</format>
+            <args/>
+         </payloadFactory>
+         <property name="HTTP_SC" scope="axis2" value="202"/>
+         <send/>
+      </outSequence>
+      <faultSequence>
+         <payloadFactory media-type="json">
+            <format>
+         		{
+				    "Response": "Failed",
+				    "responseDescription": "Unexpected Error"
+				}
+         	</format>
+            <args/>
+         </payloadFactory>
+         <property name="HTTP_SC" scope="axis2" value="500"/>
+         <respond/>
+      </faultSequence>
+   </target>
+   <description/>
+</proxy>
+                               
+
+------------------------------------------------------------------------
+
+<property name="HTTP_SC" value="500" scope="axis2"/>

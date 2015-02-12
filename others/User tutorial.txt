@@ -1,0 +1,13 @@
+sudo adduser newuser
+getent passwd
+groups newuser
+groups
+usermod -aG sudo newuser
+sudo passwd newuser
+
+------------------------------------------------------------------------
+sudo su - newuser
+xhost +
+
+------------------------------------------------------------------------
+sudo deluser newuser

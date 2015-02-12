@@ -1,0 +1,23 @@
+?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Body xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <ns:getQuoteResponse xmlns:ns="http://services.samples">
+      <ns:return xmlns:ax21="http://services.samples/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ax21:GetQuoteResponse">
+         <ax21:change>4.102377860757892</ax21:change>
+         <ax21:earnings>-8.015989090714402</ax21:earnings>
+         <ax21:high>-75.84215387431512</ax21:high>
+         <ax21:last>76.76388300068459</ax21:last>
+         <ax21:lastTradeTimestamp>Wed Jul 19 15:44:03 IST 2017</ax21:lastTradeTimestamp>
+         <ax21:low>-75.96695705679035</ax21:low>
+         <ax21:marketCap>4.6337444984248914E7</ax21:marketCap>
+         <ax21:name>IBM Company</ax21:name>
+         <ax21:open>78.83152527462713</ax21:open>
+         <ax21:peRatio>23.340505296173216</ax21:peRatio>
+         <ax21:percentageChange>-5.489000945552938</ax21:percentageChange>
+         <ax21:prevClose>-74.73815183219351</ax21:prevClose>
+         <ax21:symbol>IBM</ax21:symbol>
+         <ax21:volume>19321</ax21:volume>
+      </ns:return>
+   </ns:getQuoteResponse>
+</soapenv:Body>
+
+
