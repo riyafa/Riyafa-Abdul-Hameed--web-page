@@ -1,0 +1,4 @@
+sudo pacman -Syu
+uname -r
+sudo pacman -S virtualbox
+sudo modprobe vboxdrv
